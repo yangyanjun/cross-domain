@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <script type="module">
+    <script>
         // 高级api 兼容性不好 所以一般使用socket.io,做了封装，兼容性好
         let socket = new WebSocket('ws://localhost:3000');
         socket.onopen = function() {
