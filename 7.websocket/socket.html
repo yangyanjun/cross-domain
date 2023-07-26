@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        // 高级api 兼容性不好 所以一般使用socket.io,做了封装，兼容性好
+        let socket = new WebSocket('ws://localhost:3000');
+        socket.onopen = function() {
+            socket.send('我爱你');
+        }
+        socket.onmessage = function(e) {
+            console.log(e.data)
+        }
+    </script>
+</body>
+</html>
